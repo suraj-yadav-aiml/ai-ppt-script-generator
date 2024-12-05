@@ -1,0 +1,8 @@
+unstructured
+unstructured[all-docs]
+python-pptx
+langchain
+langchain-openai
+langchain-core
+langchain-community
+streamlit
