@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "script generation from ppt"
+version = "0.1.0"
+description = ""
+authors = ["Suraj Yadav <qwertypad7612@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = ">=3.11,<3.13"
+unstructured = {extras = ["all-docs"], version = "^0.16.9"}
+python-pptx = "^1.0.2"
+langchain = "^0.3.9"
+langchain-openai = "^0.2.11"
+langchain-core = "^0.3.21"
+langchain-community = "^0.3.9"
+streamlit = "^1.40.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

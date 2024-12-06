@@ -13,19 +13,24 @@ This project provides a **Streamlit web application** that utilizes **OpenAI's G
 The project is organized into the following directories and files:
 
 ```plaintext
-script_from_ppt/
-├── __init__.py              # Marks the directory as a Python package
-├── config.py                # Centralized configuration for the app
-├── main.py                  # Main script for PowerPoint processing and script generation
-├── powerpoint_processor.py  # Handles PowerPoint file extraction and processing
-├── prompts.py               # Stores and manages AI prompt templates
-├── script_generator.py      # Handles interaction with OpenAI's GPT models
-streamlit_app/
-├── app.py                   # Streamlit web application
-.env                         # Stores OpenAI API key
-.env.example                 # Example of the .env file for configuration
-requirements.txt             # Python dependencies for the project
-Script-from-ppt.ipynb        # Jupyter notebook for exploratory work
+├── script_from_ppt
+│   ├── __init__.py              # Marks the directory as a Python package    
+│   ├── config.py                # Centralized configuration for the app
+│   ├── main.py                  # Main script for PowerPoint processing and script generation
+│   ├── powerpoint_processor.py  # Handles PowerPoint file extraction and processing
+│   ├── prompts.py               # Stores and manages AI prompt templates
+│   ├── script_generator.py      # Handles interaction with OpenAI's GPT models
+├── streamlit_app
+│   ├── app.py                   # Streamlit web application
+├── .env                         # Stores OpenAI API key
+├── .env.example                 # Example of the .env file for configuration
+├── .gitignore                   # Specifies intentionally untracked files to ignore in the repository
+├── Makefile                     # Contains commands to simplify running and installing the project 
+├── poetry.lock                  # Locks the specific versions of dependencies to ensure consistent builds
+├── pyproject.toml               # Defines project metadata, dependencies, and build settings for Poetry
+├── README.md                    # Documentation for the project, including setup instructions and usage
+├── requirements.txt             # Python dependencies for the project
+├── Script-from-ppt.ipynb        # Jupyter notebook for exploratory work
 ```
 
 ## Prerequisites
@@ -39,20 +44,7 @@ Script-from-ppt.ipynb        # Jupyter notebook for exploratory work
    git clone https://github.com/suraj-yadav-aiml/ai-ppt-script-generator.git
    cd ai-ppt-script-generator
    ```
-
-2. **Set Up Virtual Environment**
-   ```bash
-   python -m venv script_generation
-   source script_generation/bin/activate    # Linux/Mac
-   script_generation\Scripts\activate       # Windows
-   ```
-
-3. **Install Dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-4. **Configure the Environment**
+2. **Configure the Environment**
    - Rename `.env.example` to `.env`:
      ```bash
      mv .env.example .env
@@ -61,6 +53,19 @@ Script-from-ppt.ipynb        # Jupyter notebook for exploratory work
      ```
      OPENAI_API_KEY=your_openai_api_key
      ```
+
+3. **Install Dependencies**  
+   Use the `Makefile` to install all dependencies using `Poetry`:
+   ```bash
+   make install
+   ```
+
+4. **Run the Application**  
+   Start the Streamlit app using:
+   ```bash
+   make run
+   ```
+
 
 ## Usage
 
